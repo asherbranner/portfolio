@@ -1,0 +1,80 @@
+/* CSS for Progress Bar */
+.progress-bar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 100%;
+    height: 20px;
+    margin-bottom: 10px;
+    background-color: #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+    .progress-bar .progress {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        height: 100%;
+        color: #fff;
+        text-align: center;
+        transition: width 0.5s ease-in-out;
+    }
+
+    .progress-bar .progress-text {
+        margin-left: 10px;
+        font-size: 14px;
+    }
+
+.progress-bar-fill {
+    height: 100%;
+    background-color: yellowgreen;
+    width: var(--progress);
+    transition: width 0.5s ease-in-out;
+}
+
+/* Progress bar values */
+.progress-bar .progress[aria-valuenow="0"] .progress-bar-fill {
+    width: 0%;
+}
+
+.progress-bar .progress[aria-valuenow="10"] .progress-bar-fill {
+    width: 10%;
+}
+
+.progress-bar .progress[aria-valuenow="20"] .progress-bar-fill {
+    width: 20%;
+}
+
+.progress-bar .progress[aria-valuenow="30"] .progress-bar-fill {
+    width: 30%;
+}
+
+.progress-bar .progress[aria-valuenow="40"] .progress-bar-fill {
+    width: 40%;
+}
+
+.progress-bar .progress[aria-valuenow="50"] .progress-bar-fill {
+    width: 50%;
+}
+
+.progress-bar .progress[aria-valuenow="60"] .progress-bar-fill {
+    width: 60%;
+}
+
+.progress-bar .progress[aria-valuenow="70"] .progress-bar-fill {
+    width: 70%;
+}
+
+.progress-bar .progress[aria-valuenow="80"] .progress-bar-fill {
+    width: 80%;
+}
+
+.progress-bar .progress[aria-valuenow="90"] .progress-bar-fill {
+    width: 90%;
+}
+
+.progress-bar .progress[aria-valuenow="100"] .progress-bar-fill {
+    width: 100%;
+}

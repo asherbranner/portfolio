@@ -1,0 +1,57 @@
+/* CSS for tiles */
+
+.tile-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.tile {
+    width: 30%;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    margin-bottom: 20px;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+    .tile:hover {
+        transform: translateY(-10px);
+    }
+
+    .tile img {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 10px 10px 0 0;
+    }
+
+.tile-content {
+    padding: 20px;
+}
+
+.tile-title {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+
+.tile-description {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* CSS for specific tiles */
+
+.tile-project1 {
+    background-color: #E8F8F5;
+}
+
+.tile-project2 {
+    background-color: #EAEAEA;
+}
+
+.tile-project3 {
+    background-color: #E8E8F8;
+}
