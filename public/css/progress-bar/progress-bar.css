@@ -1,4 +1,8 @@
 /* CSS for Progress Bar */
+label {
+    padding-right: 10px;
+    font-size: 1rem;
+}
 .progress-bar {
     display: flex;
     flex-direction: row;
