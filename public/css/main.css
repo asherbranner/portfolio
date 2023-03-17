@@ -1,10 +1,10 @@
 /* Global styles */
 
 /* Import tiles.css */
-@import url('/css/tiles.css');
+@import url('/css/tiles/tiles.css');
 
 /* Import progress-bar.css */
-@import url('/css/progress-bar.css');
+@import url('/css/progress-bar/progress-bar.css');
 
 /* Body styles */
 body {
