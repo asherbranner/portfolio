@@ -1,57 +1,80 @@
 /* CSS for tiles */
 
-.tile-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 20px;
+  }
 
-.tile {
-    width: 30%;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-    margin-bottom: 20px;
-    overflow: hidden;
-    transition: transform 0.3s ease-in-out;
-}
-
-    .tile:hover {
+    .grid:hover {
         transform: translateY(-10px);
     }
-
-    .tile img {
-        width: 100%;
+    .grid-container img {
+        max-width: 100%;
         height: auto;
-        display: block;
-        border-radius: 10px 10px 0 0;
     }
 
-.tile-content {
+.grid-content {
     padding: 20px;
 }
 
-.tile-title {
+.grid-title {
     margin-top: 0;
     margin-bottom: 10px;
     font-size: 24px;
 }
 
-.tile-description {
+.grid-description {
     font-size: 16px;
     line-height: 1.5;
 }
 
 /* CSS for specific tiles */
-
-.tile-project1 {
-    background-color: #E8F8F5;
+.grid-item-project-1 {
+    background-color: #e16262;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+  }
+  .grid-item-project-1 img {
+    max-width: 100%;
+    height: auto;
+    
 }
-
-.tile-project2 {
-    background-color: #EAEAEA;
+  .grid-item-project-2 {
+    background-color: #b0dd88;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+  }
+  .grid-item-project-2 img {
+    max-width: 100%;
+    height: auto;
+    
 }
-
-.tile-project3 {
-    background-color: #E8E8F8;
+  .grid-item-project-3 {
+    background-color: #5fbcea;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+  }
+  .grid-item-project-3 img {
+    max-width: 100%;
+    height: auto;
+    
+}
+  .grid-item-project-4 {
+    background-color: #bb50d9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+  }
+  .grid-item-project-4 img {
+    max-width: 100%;
+    height: auto;
+    
 }
