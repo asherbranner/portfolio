@@ -3,6 +3,7 @@ label {
     padding-right: 10px;
     font-size: 1rem;
 }
+
 .progress-bar {
     display: flex;
     flex-direction: row;
@@ -15,21 +16,21 @@ label {
     overflow: hidden;
 }
 
-    .progress-bar .progress {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: flex-start;
-        height: 100%;
-        color: #fff;
-        text-align: center;
-        transition: width 0.5s ease-in-out;
-    }
+.progress-bar .progress {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+    color: #fff;
+    text-align: center;
+    transition: width 0.5s ease-in-out;
+}
 
-    .progress-bar .progress-text {
-        margin-left: 10px;
-        font-size: 14px;
-    }
+.progress-bar .progress-text {
+    margin-left: 10px;
+    font-size: 14px;
+}
 
 .progress-bar-fill {
     height: 100%;
