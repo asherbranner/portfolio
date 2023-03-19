@@ -1,6 +1,9 @@
+# Personal Ignore Files
+*.code-workspace
+/public/images/
+
 # Created by https://www.toptal.com/developers/gitignore/api/node,vuejs,webstorm
 # Edit at https://www.toptal.com/developers/gitignore?templates=node,vuejs,webstorm
-/public/images/
 ### Node ###
 # Logs
 logs
