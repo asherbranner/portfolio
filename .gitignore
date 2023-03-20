@@ -1,6 +1,8 @@
 # Personal Ignore Files
 *.code-workspace
 /public/images/
+*.DS_Store
+*.ini
 
 # Created by https://www.toptal.com/developers/gitignore/api/node,vuejs,webstorm
 # Edit at https://www.toptal.com/developers/gitignore?templates=node,vuejs,webstorm
@@ -265,3 +267,4 @@ fabric.properties
 .idea/**/azureSettings.xml
 
 # End of https://www.toptal.com/developers/gitignore/api/node,vuejs,webstorm
+
