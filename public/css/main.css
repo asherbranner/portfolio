@@ -18,37 +18,42 @@ body {
 
 /* Header styles */
 header {
+
     background-color: #212121;
     color: #ffffff;
     padding: 1rem;
 }
 
-header ul {
-    display: inline-flex;
-    align-items: center;
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
 
 
 /* Navigation styles */
 nav {
-    
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+    grid-gap: 2rem;
     padding: 1rem;
     background-color: #424242;
 }
+nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
 nav img {
-    max-width: 128px;
+    max-width: 100%;
     height: auto;
 }
 nav a {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20px, 128px));
     color: #e48c8c;
     text-decoration: none;
-    margin: 0 .5rem;
     font-weight: bold;
+    padding: 16px;
+    border-radius: 5px;
 }
 
 nav a:hover {
