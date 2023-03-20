@@ -39,13 +39,15 @@
   text-align: center;
 }
 
-.grid-matlab img {
-  max-width: 100%;
-  height: auto;
-
+.grid-tello {
+  background-color: #e1b162;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+  text-align: center;
 }
 
-.grid-item-project-2 {
+.grid-roboarm {
   background-color: #b0dd88;
   border: 1px solid #ddd;
   border-radius: 5px;
@@ -53,13 +55,7 @@
   text-align: center;
 }
 
-.grid-item-project-2 img {
-  max-width: 100%;
-  height: auto;
-
-}
-
-.grid-item-project-3 {
+.grid-evs {
   background-color: #5fbcea;
   border: 1px solid #ddd;
   border-radius: 5px;
@@ -67,22 +63,31 @@
   text-align: center;
 }
 
-.grid-item-project-3 img {
-  max-width: 100%;
-  height: auto;
-
-}
-
-.grid-item-project-4 {
+.grid-proimp {
   background-color: #bb50d9;
   border: 1px solid #ddd;
   border-radius: 5px;
   padding: 20px;
   text-align: center;
 }
-
-.grid-item-project-4 img {
-  max-width: 100%;
-  height: auto;
-
+.grid-csuite {
+  background-color: #e16262;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+  text-align: center;
+}
+.grid-python {
+  background-color: #e1b162;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+  text-align: center;
+}
+.grid-labview {
+  background-color: #b0dd88;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+  text-align: center;
 }
