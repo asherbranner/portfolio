@@ -31,6 +31,9 @@ app.get('/engineering', (req, res) => {
 app.get('/software', (req, res) => {
   res.render('software');
 });
+app.get('/software/matlab', (req, res) => {
+  res.render('matlab');
+});
 
 // Start the server
 const PORT = process.env.PORT || 3000;

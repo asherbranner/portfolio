@@ -31,7 +31,7 @@
 }
 
 /* CSS for specific tiles */
-.grid-item-project-1 {
+.grid-matlab {
   background-color: #e16262;
   border: 1px solid #ddd;
   border-radius: 5px;
@@ -39,7 +39,7 @@
   text-align: center;
 }
 
-.grid-item-project-1 img {
+.grid-matlab img {
   max-width: 100%;
   height: auto;
 

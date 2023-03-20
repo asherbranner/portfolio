@@ -24,6 +24,8 @@ header {
 }
 
 header ul {
+    display: inline-flex;
+    align-items: center;
     list-style: none;
     padding: 0;
     margin: 0;
@@ -32,13 +34,16 @@ header ul {
 
 /* Navigation styles */
 nav {
-    display: flex;
+    
     justify-content: space-between;
     align-items: center;
-    padding: 0;
+    padding: 1rem;
     background-color: #424242;
 }
-
+nav img {
+    max-width: 128px;
+    height: auto;
+}
 nav a {
     color: #e48c8c;
     text-decoration: none;
@@ -52,7 +57,7 @@ nav a:hover {
 
 /* Main content styles */
 main {
-    flex: 1;
+    display: flex;
     padding: 1rem;
     margin-bottom: 4rem;
 }
