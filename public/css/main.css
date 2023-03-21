@@ -50,11 +50,12 @@ header a::webkit-any-link {
     cursor: pointer;
     text-decoration: none;
 }
+
 /* Navigation styles */
 nav {
     width: auto;
     justify-content: center;
-    align-items: center;    
+    align-items: center;
     grid-gap: 2rem;
     padding: 1rem;
     background-color: #424242;
@@ -100,6 +101,7 @@ footer {
     width: 100%;
     text-align: center;
 }
+
 footer img {
     max-height: 36px;
     width: auto;

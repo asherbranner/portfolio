@@ -20,204 +20,188 @@
     <%- include('header') %>
       <h1>Software Projects</h1>
   </header>
-    <main>
-      <!-- Grid layout for live tiles -->
-      <div class="grid-container">
+  <main>
+    <!-- Grid layout for live tiles -->
+    <div class="grid-container">
 
-        <!-- Project 1: project name, image, and description -->
-        <div class="grid-matlab">
-            <h2>MATLAB</h2>
-            <a href = "software/matlab"><img src=/images/logos/lang/matlab.png alt="Matlab"></a>
-            <div class="progress">
-              <progress 
-                id="matexp" max="110" value="50"> 50%
-              </progress>
-            </div>
-            <span class="progress-text">5 Years Experience</span>
-            <div class="progress">
-              <progress 
-                id="actmat" max="100" value="40"> 40%
-              </progress>
-            </div>
-            <span class="progress-text">2 Active Projects</span>
-            <div class="progress">
-              <progress 
-                id="datia" max="100" value="90"> 90%
-              </progress>
-            </div>
-            <span class="progress-text">Data Import & Analysis</span>
-            <div>
-              <progress 
-                id="simenv" max="100" value="80"> 80%
-              </progress>
-            </div>
-            <span class="progress-text">Simulation Environments</span>
-              <div>
-                <progress 
-                  id="datvis" max="100" value="70"> 70%
-                </progress>
-              </div>
-              <span class="progress-text">Data Visualization</span>
-                <div>
-                  <progress 
-                    id="ctrl" max="100" value="60"> 60%
-                  </progress>
-                </div>
-              <span class="progress-text">Controls & PID Loops</span> 
+      <!-- Project 1: project name, image, and description -->
+      <div class="grid-matlab">
+        <h2>MATLAB</h2>
+        <a href="software/matlab"><img src=/images/logos/lang/matlab.png alt="Matlab"></a>
+        <div class="progress">
+          <progress id="matexp" max="110" value="50"> 50%
+          </progress>
         </div>
- 
-        <!-- Project 2: project name, image, and description -->
-        <div class="grid-python">
-          <h2>Python</h2>
-          <a href = "software/python"><img src=/images/logos/lang/python.png alt="Python"></a>
-          <div class="progress">
-            <progress id="pyexp" max="110" value="50"> 50%
-            </progress>
-          </div>
-          <span class="progress-text">5 Years Experience</span>
-          <div class="progress">
-            <progress id="pypro" max="5" value="3"> 100%
-            </progress>
-          </div>
-          <span class="progress-text">3 Major Inactive Projects</span>
-          
-          <div class="progress">
-              <progress 
-                id="pydat" max="100" value="80"> 80%
-              </progress>
-            </div>
-            <span class="progress-text">Data Import & Analysis</span>
-            <div>
-              <progress 
-                id="pysim" max="100" value="80"> 80%
-              </progress>
-            </div>
-            <span class="progress-text">Cost/Labor Simulation</span>
-              <div>
-                <progress 
-                  id="pyctrl" max="100" value="70"> 70%
-                </progress>
-              <span class="progress-text">Controls Logic</span>
-              </div>
-              <div>
-                <progress 
-                  id="pyvis" max="100" value="70"> 70%
-                </progress>
-              </div>
-              <span class="progress-text">OpenCV/Vision Profiling</span>
-                <div>
-                  <progress 
-                    id="pyml" max="100" value="60"> 60%
-                  </progress>
-                </div>
-                <span class="progress-text">ML Learning/Training</span>
-            </div>
-
-        <!-- Project 3: project name, image, and description -->
-        <div class="grid-labview">
-          <h2>LabView</h2>
-          <a href = "software/labview"><img src=/images/logos/lang/labview.png alt="LabView"></a>
-          <p>Autodesk</p>
-          <div class="progress">
-            <progress id="file" max="110" value="90"> 100%
-            </progress>
-          </div>
-          <span class="progress-text">9 Years Experience</span>
-          <div>
-            <progress id="file" max="100" value="67"> 67%
-            </progress>
-          </div>
-          <span class="progress-text">Medium Technical Knowledge</span>
+        <span class="progress-text">5 Years Experience</span>
+        <div class="progress">
+          <progress id="actmat" max="100" value="40"> 40%
+          </progress>
         </div>
-
-        <!-- Project 4: project name, image, and description -->
-        <div class="grid-csuite">
-          <h2>Object-Based C</h2>
-          <a href = "software/c"><img src=/images/logos/lang/c-suite.png alt="C-Suite"></a>
-          <p>filler</p>
-          <div class="progress">
-            <progress id="file" max="110" value="90"> 90%
-            </progress>
-          </div>
-          <span class="progress-text">9 Years Experience</span>
-          <div>
-            <progress id="file" max="100" value="100"> 100%
-            </progress>
-          </div>
-          <span class="progress-text">High Technical Knowledge</span>
+        <span class="progress-text">2 Active Projects</span>
+        <div class="progress">
+          <progress id="datia" max="100" value="90"> 90%
+          </progress>
         </div>
-
-        <div class="grid-java">
-          <h2>Java</h2>
-          <a href = "software/java"><img src=/images/logos/lang/java.png alt="Python"></a>
-          <div class="progress">
-            <progress id="pyexp" max="110" value="100"> 100%
-            </progress>
-          </div>
-          <span class="progress-text">10 Years Experience</span>
-          <div class="progress">
-            <progress id="pyexp" max="5" value="3"> 100%
-            </progress>
-          </div>
-          <span class="progress-text">3 Active Projects</span>
-            
-          <div class="progress">
-              <progress 
-                id="jserver" max="100" value="80"> 80%
-              </progress>
-            </div>
-            <span class="progress-text">Java Server DevOps</span>
-            <div>
-              <progress 
-                id="joop" max="100" value="80"> 80%
-              </progress>
-            </div>
-            <span class="progress-text">Object-Oriented Programming</span>
-              <div>
-                <progress 
-                  id="jredev" max="100" value="70"> 70%
-                </progress>
-              </div>
-              <span class="progress-text">JRE Development</span>
-              <div>
-                <progress 
-                  id="jvmint" max="100" value="60"> 60%
-                </progress>
-              </div>
-              <span class="progress-text">JVM Internals</span>
-                <div>
-                  <progress 
-                    id="jbt" max="100" value="60"> 60%
-                  </progress>
-                </div>
-                <span class="progress-text">BuildTools/Gradle</span>
-            </div>
-
-        <div class="grid-html">
-          <h2>HTML5 & CSS</h2>
-          <a href = "software/html5"><img src=/images/logos/lang/html.png alt="HTML5"></a>
-          <p>filler</p>
-          <div class="progress">
-            <progress id="file" max="110" value="110"> 100%
-            </progress>
-          </div>
-          <span class="progress-text">11 Years Experience</span>
-          <div>
-            <progress id="file" max="100" value="100"> 100%
-            </progress>
-          </div>
-          <span class="progress-text">High Technical Knowledge</span>
+        <span class="progress-text">Data Import & Analysis</span>
+        <div>
+          <progress id="simenv" max="100" value="80"> 80%
+          </progress>
         </div>
-        
-        
-        <!-- Add more tiles as needed... -->
+        <span class="progress-text">Simulation Environments</span>
+        <div>
+          <progress id="datvis" max="100" value="70"> 70%
+          </progress>
+        </div>
+        <span class="progress-text">Data Visualization</span>
+        <div>
+          <progress id="ctrl" max="100" value="60"> 60%
+          </progress>
+        </div>
+        <span class="progress-text">Controls & PID Loops</span>
       </div>
 
-      <!-- CSS styles for grid layout -->
-      <style>
-      </style>
-    </main>
-    <footer>
-      <%- include('footer') %>
-    </footer>
+      <!-- Project 2: project name, image, and description -->
+      <div class="grid-python">
+        <h2>Python</h2>
+        <a href="software/python"><img src=/images/logos/lang/python.png alt="Python"></a>
+        <div class="progress">
+          <progress id="pyexp" max="110" value="50"> 50%
+          </progress>
+        </div>
+        <span class="progress-text">5 Years Experience</span>
+        <div class="progress">
+          <progress id="pypro" max="5" value="3"> 100%
+          </progress>
+        </div>
+        <span class="progress-text">3 Major Inactive Projects</span>
+
+        <div class="progress">
+          <progress id="pydat" max="100" value="80"> 80%
+          </progress>
+        </div>
+        <span class="progress-text">Data Import & Analysis</span>
+        <div>
+          <progress id="pysim" max="100" value="80"> 80%
+          </progress>
+        </div>
+        <span class="progress-text">Cost/Labor Simulation</span>
+        <div>
+          <progress id="pyctrl" max="100" value="70"> 70%
+          </progress>
+          <span class="progress-text">Controls Logic</span>
+        </div>
+        <div>
+          <progress id="pyvis" max="100" value="70"> 70%
+          </progress>
+        </div>
+        <span class="progress-text">OpenCV/Vision Profiling</span>
+        <div>
+          <progress id="pyml" max="100" value="60"> 60%
+          </progress>
+        </div>
+        <span class="progress-text">ML Learning/Training</span>
+      </div>
+
+      <!-- Project 3: project name, image, and description -->
+      <div class="grid-labview">
+        <h2>LabView</h2>
+        <a href="software/labview"><img src=/images/logos/lang/labview.png alt="LabView"></a>
+        <p>Autodesk</p>
+        <div class="progress">
+          <progress id="file" max="110" value="90"> 100%
+          </progress>
+        </div>
+        <span class="progress-text">9 Years Experience</span>
+        <div>
+          <progress id="file" max="100" value="67"> 67%
+          </progress>
+        </div>
+        <span class="progress-text">Medium Technical Knowledge</span>
+      </div>
+
+      <!-- Project 4: project name, image, and description -->
+      <div class="grid-csuite">
+        <h2>Object-Based C</h2>
+        <a href="software/c"><img src=/images/logos/lang/c-suite.png alt="C-Suite"></a>
+        <p>filler</p>
+        <div class="progress">
+          <progress id="file" max="110" value="90"> 90%
+          </progress>
+        </div>
+        <span class="progress-text">9 Years Experience</span>
+        <div>
+          <progress id="file" max="100" value="100"> 100%
+          </progress>
+        </div>
+        <span class="progress-text">High Technical Knowledge</span>
+      </div>
+
+      <div class="grid-java">
+        <h2>Java</h2>
+        <a href="software/java"><img src=/images/logos/lang/java.png alt="Python"></a>
+        <div class="progress">
+          <progress id="pyexp" max="110" value="100"> 100%
+          </progress>
+        </div>
+        <span class="progress-text">10 Years Experience</span>
+        <div class="progress">
+          <progress id="pyexp" max="5" value="3"> 100%
+          </progress>
+        </div>
+        <span class="progress-text">3 Active Projects</span>
+
+        <div class="progress">
+          <progress id="jserver" max="100" value="80"> 80%
+          </progress>
+        </div>
+        <span class="progress-text">Java Server DevOps</span>
+        <div>
+          <progress id="joop" max="100" value="80"> 80%
+          </progress>
+        </div>
+        <span class="progress-text">Object-Oriented Programming</span>
+        <div>
+          <progress id="jredev" max="100" value="70"> 70%
+          </progress>
+        </div>
+        <span class="progress-text">JRE Development</span>
+        <div>
+          <progress id="jvmint" max="100" value="60"> 60%
+          </progress>
+        </div>
+        <span class="progress-text">JVM Internals</span>
+        <div>
+          <progress id="jbt" max="100" value="60"> 60%
+          </progress>
+        </div>
+        <span class="progress-text">BuildTools/Gradle</span>
+      </div>
+
+      <div class="grid-html">
+        <h2>HTML5 & CSS</h2>
+        <a href="software/html5"><img src=/images/logos/lang/html.png alt="HTML5"></a>
+        <p>filler</p>
+        <div class="progress">
+          <progress id="file" max="110" value="110"> 100%
+          </progress>
+        </div>
+        <span class="progress-text">11 Years Experience</span>
+        <div>
+          <progress id="file" max="100" value="100"> 100%
+          </progress>
+        </div>
+        <span class="progress-text">High Technical Knowledge</span>
+      </div>
+
+
+      <!-- Add more tiles as needed... -->
+    </div>
+
+    <!-- CSS styles for grid layout -->
+    <style>
+    </style>
+  </main>
+  <footer>
+    <%- include('footer') %>
+  </footer>
 </body
