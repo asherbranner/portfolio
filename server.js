@@ -48,6 +48,10 @@ app.get('/software/c', (req, res) => {
   res.render('c');
 });
 
+app.get('/software/java', (req, res) => {
+  res.render('java');
+});
+
 app.get('/software/html5', (req, res) => {
   res.render('html5');
 });

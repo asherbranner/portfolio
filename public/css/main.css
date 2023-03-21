@@ -50,7 +50,6 @@ header a::webkit-any-link {
     cursor: pointer;
     text-decoration: none;
 }
-
 /* Navigation styles */
 nav {
     width: auto;
@@ -93,7 +92,7 @@ nav a:hover {
 footer {
     background-color: #212121;
     color: #ffffff;
-    padding: 1rem;
+    padding: .5rem;
     text-align: center;
     font-size: .8rem;
     bottom: 0;
@@ -102,7 +101,7 @@ footer {
     text-align: center;
 }
 footer img {
-    max-height: 48px;
+    max-height: 36px;
     width: auto;
 }
 
