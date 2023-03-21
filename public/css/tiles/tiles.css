@@ -32,7 +32,7 @@
 
 /* CSS for specific tiles */
 .grid-matlab {
-  background-color: #e16262;
+  background-color: #e18c62;
   border: 1px solid #ddd;
   border-radius: 5px;
   padding: 20px;
@@ -71,7 +71,7 @@
   text-align: center;
 }
 .grid-csuite {
-  background-color: #e16262;
+  background-color: #627be1;
   border: 1px solid #ddd;
   border-radius: 5px;
   padding: 20px;
@@ -85,7 +85,15 @@
   text-align: center;
 }
 .grid-labview {
-  background-color: #b0dd88;
+  background-color: #dddc88;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+  text-align: center;
+}
+
+.grid-html {
+  background-color: #dda988;
   border: 1px solid #ddd;
   border-radius: 5px;
   padding: 20px;
