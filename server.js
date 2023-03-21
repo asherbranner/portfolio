@@ -31,8 +31,25 @@ app.get('/engineering', (req, res) => {
 app.get('/software', (req, res) => {
   res.render('software');
 });
+
 app.get('/software/matlab', (req, res) => {
   res.render('matlab');
+});
+
+app.get('/software/python', (req, res) => {
+  res.render('python');
+});
+
+app.get('/software/labview', (req, res) => {
+  res.render('labview');
+});
+
+app.get('/software/c', (req, res) => {
+  res.render('c');
+});
+
+app.get('/software/html5', (req, res) => {
+  res.render('html5');
 });
 
 // Start the server
