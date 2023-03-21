@@ -101,6 +101,10 @@ footer {
     width: 100%;
     text-align: center;
 }
+footer img {
+    max-height: 48px;
+    width: auto;
+}
 
 progress {
     color: #000000;
