@@ -11,8 +11,9 @@
 }
 
 .grid-container img {
+
   max-width: 100%;
-  height: auto;
+  max-height: auto;
 }
 
 .grid-content {
@@ -33,7 +34,7 @@
 /* CSS for specific tiles */
 .grid-matlab {
   background-color: #e18c62;
-  border: 1px solid #ddd;
+  border: 1px solid #4d4d4d;
   border-radius: 5px;
   padding: 20px;
   text-align: center;
@@ -41,7 +42,7 @@
 
 .grid-tello {
   background-color: #e1b162;
-  border: 1px solid #ddd;
+  border: 1px solid #4d4d4d;
   border-radius: 5px;
   padding: 20px;
   text-align: center;
@@ -49,7 +50,7 @@
 
 .grid-roboarm {
   background-color: #b0dd88;
-  border: 1px solid #ddd;
+  border: 1px solid #4d4d4d;
   border-radius: 5px;
   padding: 20px;
   text-align: center;
@@ -57,7 +58,7 @@
 
 .grid-evs {
   background-color: #5fbcea;
-  border: 1px solid #ddd;
+  border: 1px solid #4d4d4d;
   border-radius: 5px;
   padding: 20px;
   text-align: center;
@@ -65,7 +66,7 @@
 
 .grid-proimp {
   background-color: #bb50d9;
-  border: 1px solid #ddd;
+  border: 1px solid #4d4d4d;
   border-radius: 5px;
   padding: 20px;
   text-align: center;
@@ -73,7 +74,7 @@
 
 .grid-csuite {
   background-color: #627be1;
-  border: 1px solid #ddd;
+  border: 1px solid #4d4d4d;
   border-radius: 5px;
   padding: 20px;
   text-align: center;
@@ -81,7 +82,7 @@
 
 .grid-python {
   background-color: #e1b162;
-  border: 1px solid #ddd;
+  border: 1px solid #4d4d4d;
   border-radius: 5px;
   padding: 20px;
   text-align: center;
@@ -89,7 +90,7 @@
 
 .grid-labview {
   background-color: #dddc88;
-  border: 1px solid #ddd;
+  border: 1px solid #4d4d4d;
   border-radius: 5px;
   padding: 20px;
   text-align: center;
@@ -97,7 +98,7 @@
 
 .grid-html {
   background-color: #dda988;
-  border: 1px solid #ddd;
+  border: 1px solid #4d4d4d;
   border-radius: 5px;
   padding: 20px;
   text-align: center;
@@ -105,7 +106,7 @@
 
 .grid-java {
   background-color: #62bde1;
-  border: 1px solid #ddd;
+  border: 1px solid #4d4d4d;
   border-radius: 5px;
   padding: 20px;
   text-align: center;
