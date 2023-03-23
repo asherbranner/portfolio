@@ -11,9 +11,9 @@ app.use(express.static('public'));
 app.use(express.static(__dirname, { dotfiles: 'allow' } ));
 // Set the view engine to EJS
 app.set('view engine', 'ejs');
-const privateKey = fs.readFileSync('C:/Certbot/live/web.noaha.tech/privkey.pem', 'utf8');
-const certificate = fs.readFileSync('C:/Certbot/live/web.noaha.tech/cert.pem', 'utf8');
-const ca = fs.readFileSync('C:/Certbot/live/web.noaha.tech/chain.pem', 'utf8');
+const privateKey = fs.readFileSync('C:/Certbot/live/noaha.tech/privkey.pem', 'utf8');
+const certificate = fs.readFileSync('C:/Certbot/live/noaha.tech/cert.pem', 'utf8');
+const ca = fs.readFileSync('C:/Certbot/live/noaha.tech/chain.pem', 'utf8');
 
 const credentials = {
 	key: privateKey,
@@ -67,7 +67,7 @@ app.get('/software/html5', (req, res) => {
 });
 // Start the server
 const httpServer = http.createServer(app);
-const httpsServer = https.createServer(credentials, app);
+const httpsServer = https.createServer(credentials, app); 
 
 httpServer.listen(80, () => {
 	console.log('HTTP Server running on port 80');
