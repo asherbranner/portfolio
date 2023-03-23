@@ -1,9 +1,10 @@
+
 // Require necessary modules
 const express = require('express');
 
 // Create a new instance of Express
 const app = express();
-
+app.use(express.static(__dirname, { dotfiles: 'allow' } ));
 // Set the view engine to EJS
 app.set('view engine', 'ejs');
 
@@ -55,7 +56,6 @@ app.get('/software/java', (req, res) => {
 app.get('/software/html5', (req, res) => {
   res.render('html5');
 });
-
 // Start the server
 const PORT = process.env.PORT || 80;
 app.listen(PORT, () => {
