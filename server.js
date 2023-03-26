@@ -7,13 +7,10 @@ const httpport = 80;
 const httpsport = 443;
 // Create a new instance of Express
 const app = express();
+app.enable('trust proxy')
 app.use((req, res, next) => {
-  if(req.protocol === 'http') {
-    res.redirect(301, "https://" + req.headers.host + req.url);
-    res.end();
-  }
-  next();
-});
+    req.secure ? next() : res.redirect('https://' + req.headers.host + req.url)
+})
 app.use(express.static('public'));
 app.use(express.static(__dirname, { dotfiles: 'allow' }));
 // Set the view engine to EJS
@@ -76,6 +73,11 @@ app.get('/software/java', (req, res) => {
 app.get('/software/html5', (req, res) => {
   res.render('html5');
 });
+// Handling non matching request from the client
+app.use((req, res, next) => {
+  res.status(404).send(
+      "<%- include('header') %><h1>That's awkward... This page doesn't exist. Retry Home?</h1><a href='/'><img src= '/images/icons/status/online.png'</a>")
+})
 
 httpServer.listen(httpport, () => {
 	console.log('HTTP Server running on port 80');

@@ -1,6 +1,7 @@
 # Personal Ignore Files
 *.code-workspace
 /public/images/
+/public/videos/
 /public/.well-known/
 *.DS_Store
 *.ini
