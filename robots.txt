@@ -3,3 +3,5 @@ Disallow:
 
 User-agent: *
 Disallow: 
+
+Sitemap: https://noaha.tech/sitemap.xml
