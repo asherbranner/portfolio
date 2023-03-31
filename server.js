@@ -9,7 +9,10 @@ const httpsport = 443;
 const app = express();
 app.enable('trust proxy')
 app.use((req, res, next) => {
-    req.secure ? next() : res.redirect('https://' + req.headers.host + req.url)
+  res.setHeader('X-Content-Type-Options', 'nosniff');
+  res.setHeader('Strict-Transport-Security', 'max-age=31536000; includeSubDomains','preload');
+  res.setHeader('Content-Security-Policy', "default-src 'self'; font-src 'self'; img-src 'self'; script-src 'self'; style-src 'self'; frame-src 'self';frame-ancestors 'self'; base-uri 'self'");
+    req.secure ? next() : res.redirect('https://' + req.headers.host + req.url);
 })
 app.use(express.static('public'));
 app.use(express.static(__dirname, { dotfiles: 'allow' }));
