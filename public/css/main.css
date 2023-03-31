@@ -40,9 +40,6 @@ header h1 {
     color: white;
 }
 
-header h1:hover {
-    text-decoration: underline;
-}
 
 header a::webkit-any-link {
     color: white;
