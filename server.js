@@ -81,7 +81,7 @@ app.get('/software/html5', (req, res) => {
 // Handling non matching request from the client
 app.use((req, res, next) => {
   res.status(404).send(
-      "<%- include('header') %><h1>That's awkward... This page doesn't exist. Retry Home?</h1><a href='/'><img src= '/images/icons/status/online.png'</a>")
+      "<%- include('const/header') %><h1>That's awkward... This page doesn't exist. Retry Home?</h1><a href='/'><img src= '/images/icons/status/online.png'</a>")
 })
 
 
