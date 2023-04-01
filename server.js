@@ -56,27 +56,27 @@ app.get('/software', (req, res) => {
 });
 
 app.get('/software/matlab', (req, res) => {
-  res.render('matlab');
+  res.render('software/matlab');
 });
 
 app.get('/software/python', (req, res) => {
-  res.render('python');
+  res.render('software/python');
 });
 
 app.get('/software/labview', (req, res) => {
-  res.render('labview');
+  res.render('software/labview');
 });
 
 app.get('/software/c', (req, res) => {
-  res.render('c');
+  res.render('software/c');
 });
 
 app.get('/software/java', (req, res) => {
-  res.render('java');
+  res.render('software/java');
 });
 
 app.get('/software/html5', (req, res) => {
-  res.render('html5');
+  res.render('software/html5');
 });
 // Handling non matching request from the client
 app.use((req, res, next) => {

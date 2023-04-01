@@ -2,15 +2,15 @@
 <html>
 
 <head>
-  <%- include('head') %>
-    <title>Software Projects</title>
+  <%- include('../head') %>
+    <link rel = "stylesheet" href = "/css/tiles/software/tiles-labview.css">
+    <title>LabView Experience</title>
 </head>
 
 <body>
   <header>
-    <%- include('header') %>
-      <link rel="stylesheet" href="/css/tiles/software/tiles-c.css">
-      <h1>Object-Based C Experience</h1>
+    <%- include('../header') %>
+      <h1>LabView Experience</h1>
   </header>
   <main>
     <!-- Grid layout for live tiles -->
@@ -20,11 +20,6 @@
         <h2>First Tech Challenge</h2>
         <img src=/images/projects/ftc.png alt="ftc">
         <p>Insert Text</p>
-        <div>
-          <progress id="file" max="100" value="20"> 20%
-          </progress>
-        </div>
-        <span class="progress-text">2 Years Experience</span>
       </div>
       <!-- Grid FRC -->
       <div class="grid-frc">
@@ -42,28 +37,15 @@
         </div>
         <span class="progress-text">High Technical Knowledge</span>
       </div>
-      <!-- Grid PLTW -->
-      <div class="grid-pltw">
-        <h2>Engineering Pathway</h2>
-        <img src="/images/projects/pltw.png" alt="pltw">
-        <p>Object-Based C</p>
-        <div>
-          <progress id="file" max="100" value="20"> 20%
-          </progress>
-        </div>
-        <span class="progress-text">2 Years Experience</span>
-        <div>
-          <progress id="file" max="100" value="100"> 100%
-          </progress>
-        </div>
-        <span class="progress-text">High Technical Knowledge</span>
-      </div>
+
+
       <!-- Add more tiles as needed... -->
-    <!-- gridcontainer -->
     </div>
+
+    <!-- CSS styles for grid layout -->
   </main>
   <footer>
-    <%- include('footer') %>
+    <%- include('../footer') %>
   </footer>
 </body>
 
