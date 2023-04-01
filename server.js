@@ -9,6 +9,8 @@ const httpsport = 443;
 const app = express();
 app.enable('trust proxy')
 app.use((req, res, next) => {
+  res.setHeader('X-Powered-By', 'Noah A. (noaha.tech)');
+  res.setHeader('X-Frame-Options', 'SAMEORIGIN');
   res.setHeader('X-Content-Type-Options', 'nosniff');
   res.setHeader('Strict-Transport-Security', 'max-age=31536000; includeSubDomains','preload');
   res.setHeader('Content-Security-Policy', "default-src 'self'; font-src 'self'; img-src 'self'; script-src 'self'; style-src 'self'; frame-src 'self';frame-ancestors 'self'; base-uri 'self'");
@@ -81,6 +83,7 @@ app.use((req, res, next) => {
   res.status(404).send(
       "<%- include('header') %><h1>That's awkward... This page doesn't exist. Retry Home?</h1><a href='/'><img src= '/images/icons/status/online.png'</a>")
 })
+
 
 httpServer.listen(httpport, () => {
 	console.log('HTTP Server running on port 80');
