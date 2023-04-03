@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <%- include('../const/head') %>
+    <link rel="stylesheet" href="/css/tiles/engineering/tiles-add.css">
+    <title>Additional Experience</title>
+</head>
+
+<body>
+  <header>
+    <%- include('../const/header') %>
+      <h1>Additional Experience</h1>
+  </header>
+  <main>
+    <!-- Grid layout for live tiles -->
+    <div class="grid-container">
+      <!-- Grid Conceptual Design -->
+      <div class="grid-condes">
+        <h2>Conceptual Design</h2>
+        <img src=/images/projects/ftc.png alt="ftc">
+        <p>Insert Text</p>
+      </div>
+      <!-- Grid Drafting -->
+      <div class="grid-d2world">
+        <h2>Drafting</h2>
+        <img src="/images/projects/frc.png" alt="frc">
+        <p>Object-Based C</p>
+        <div>
+          <progress id="file" max="100" value="20"> 20%
+          </progress>
+        </div>
+        <span class="progress-text">2 Years Experience</span>
+        <div>
+          <progress id="file" max="100" value="100"> 100%
+          </progress>
+        </div>
+        <span class="progress-text">High Technical Knowledge</span>
+      </div>
+      <!-- Grid Mechanical Simulation -->
+      <div class="grid-mechsim">
+        <h2>Mechanical Simulation</h2>
+        <img src="/images/projects/frc.png" alt="frc">
+        <p>Object-Based C</p>
+        <div>
+          <progress id="file" max="100" value="20"> 20%
+          </progress>
+        </div>
+        <span class="progress-text">2 Years Experience</span>
+        <div>
+          <progress id="file" max="100" value="100"> 100%
+          </progress>
+        </div>
+        <span class="progress-text">High Technical Knowledge</span>
+      </div>
+
+      <!-- Add more tiles as needed... -->
+    </div>
+
+    <!-- CSS styles for grid layout -->
+  </main>
+  <footer>
+    <%- include('../const/footer') %>
+  </footer>
+</body>
+
+</html>

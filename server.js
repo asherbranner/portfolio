@@ -78,6 +78,26 @@ app.get('/software/java', (req, res) => {
 app.get('/software/html5', (req, res) => {
   res.render('software/html5');
 });
+
+app.get('/engineering/add', (req, res) => {
+  res.render('engineering/add');
+});
+
+app.get('/engineering/cad', (req, res) => {
+  res.render('engineering/cad');
+});
+
+app.get('/engineering/elec', (req, res) => {
+  res.render('engineering/elec');
+});
+
+app.get('/engineering/team', (req, res) => {
+  res.render('engineering/team');
+});
+
+
+
+
 // Handling non matching request from the client
 app.use((req, res, next) => {
   res.status(404).send(
