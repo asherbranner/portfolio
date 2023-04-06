@@ -10,10 +10,10 @@ const app = express();
 app.enable('trust proxy')
 app.use((req, res, next) => {
   res.setHeader('X-Powered-By', 'Noah A. (noaha.tech)');
-  res.setHeader('X-Frame-Options', 'SAMEORIGIN');
+  res.setHeader('X-Frame-Options', 'sameorigin' );
   res.setHeader('X-Content-Type-Options', 'nosniff');
   res.setHeader('Strict-Transport-Security', 'max-age=31536000; includeSubDomains','preload');
-  res.setHeader('Content-Security-Policy', "default-src 'self'; font-src 'self'; img-src 'self'; script-src 'self'; style-src 'self'; frame-src 'self';frame-ancestors 'self'; base-uri 'self'");
+  res.setHeader('Content-Security-Policy', "default-src 'self' https://analytics.google.com/ https://stats.g.doubleclick.net/ 'unsafe-inline' ; font-src 'self'; img-src 'self'; script-src 'self' https://www.googletagmanager.com/ https://www.termsfeed.com/public/cookie-consent/4.1.0/cookie-consent.js 'unsafe-inline'; style-src 'self' https://www.termsfeed.com/public/cookie-consent/4.1.0/cookie-consent.js 'unsafe-inline'; frame-src 'self' ;frame-ancestors 'self'; base-uri 'self'");
     req.secure ? next() : res.redirect('https://' + req.headers.host + req.url);
 })
 app.use(express.static('public'));
