@@ -1,25 +1,26 @@
+/* grid inventor */
+.grid-inventor {
+  background-color: #f8ff7d;
+  border: 1px solid #4d4d4d;
+  border-radius: 5px;
+  padding: 20px;
+  text-align: center;
+}
 
-  /* grid inventor */
-  .grid-inventor {
-    background-color: #f8ff7d;
-    border: 1px solid #4d4d4d;
-    border-radius: 5px;
-    padding: 20px;
-    text-align: center;
-  }
-  /* grid autocad */
-  .grid-autocad {
-    background-color: #ec729f;
-    border: 1px solid #4d4d4d;
-    border-radius: 5px;
-    padding: 20px;
-    text-align: center;
-  }
-  /* grid solidworks */
-  .grid-solidworks {
-    background-color: #ec7272;
-    border: 1px solid #4d4d4d;
-    border-radius: 5px;
-    padding: 20px;
-    text-align: center;
-  }
+/* grid autocad */
+.grid-autocad {
+  background-color: #ec729f;
+  border: 1px solid #4d4d4d;
+  border-radius: 5px;
+  padding: 20px;
+  text-align: center;
+}
+
+/* grid solidworks */
+.grid-solidworks {
+  background-color: #ec7272;
+  border: 1px solid #4d4d4d;
+  border-radius: 5px;
+  padding: 20px;
+  text-align: center;
+}

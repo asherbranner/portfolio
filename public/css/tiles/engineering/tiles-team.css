@@ -6,6 +6,7 @@
     padding: 20px;
     text-align: center;
   }
+
   /* grid capstone team */
   .grid-capstone {
     background-color: #f08ca7;
@@ -14,6 +15,7 @@
     padding: 20px;
     text-align: center;
   }
+
   /* grid electrical Teams */
   .grid-elteam {
     background-color: #e4f08c;
@@ -22,4 +24,3 @@
     padding: 20px;
     text-align: center;
   }
-  
