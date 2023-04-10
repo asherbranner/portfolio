@@ -7,6 +7,9 @@ const httpport = 80;
 const httpsport = 443;
 const cacheTime = 86400000 * 30 // the time you want
 const path = require('path')
+var nodemailer = require('nodemailer');
+const { TLSSocket } = require('tls');
+require('dotenv').config();
 // Create a new instance of Express
 const app = express();
 app.enable('trust proxy')
@@ -23,6 +26,9 @@ app.use(express.static(path.join(__dirname, 'public'), {
   maxAge: cacheTime
  }))
 app.use(express.static(__dirname, { dotfiles: 'allow' }));
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
 // Set the view engine to EJS
 app.set('view engine', 'ejs');
 const privateKey = fs.readFileSync('C://Certbot/live/noaha.tech/privkey.pem', 'utf8');
@@ -50,9 +56,39 @@ app.get('/projects', (req, res) => {
   res.render('projects');
 });
 
-app.get('/about', (req, res) => {
+app.get('/about', function(req, res) {
   res.render('about');
 });
+
+app.post('/contact',function(req, res) {
+  console.log(req.body);
+  console.log(req.body.contactname);
+  var contactname = req.body.contactname;
+  var contactemail = req.body.contactemail;
+  var contactmessage = req.body.contactmessage;
+  var transporter = nodemailer.createTransport({
+    service: process.env.nodemailservice,
+    auth: {
+      user: process.env.nodemailuser, 
+      pass: process.env.nodemailpass
+    },
+  });
+  var mailOptions = {
+    from: '"Contact Noah" <contact@noaha.tech>',
+    to: "noah@noaha.tech",
+    subject: 'Contact Submission - ' + contactname + ' - ' + contactemail,
+    body: contactmessage
+  }
+  transporter.sendMail(mailOptions, function(error, info){
+    if (error) {
+      console.log(error);
+    } 
+    else {
+      console.log('Email sent: ' + info.response);
+    }
+    res.redirect('/about')
+  })
+})
 
 app.get('/engineering', (req, res) => {
   res.render('engineering');
@@ -108,10 +144,10 @@ app.use((req, res, next) => {
       "<%- include('const/header') %><h1>That's awkward... This page doesn't exist. Retry Home?</h1><a href='/'><img src= '/images/icons/status/online.png'</a>")
 })
 
-httpServer.listen(httpport, () => {
+httpServer.listen(httpport, function() {
 	console.log('HTTP Server running on port 80');
 });
 
-httpsServer.listen(httpsport,() => {
+httpsServer.listen(httpsport,function() {
 	console.log('HTTPS Server running on port 443');
 });
