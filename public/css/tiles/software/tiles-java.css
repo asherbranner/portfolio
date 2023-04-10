@@ -1,24 +1,23 @@
+.grid-frc {
+  background-color: #72cbec;
+  border: 1px solid #4d4d4d;
+  border-radius: 5px;
+  padding: 20px;
+  text-align: center;
+}
 
-  .grid-frc {
-    background-color: #72cbec;
-    border: 1px solid #4d4d4d;
-    border-radius: 5px;
-    padding: 20px;
-    text-align: center;
-  }
-  
-  .grid-javaserver {
-    background-color: #f08ca7;
-    border: 1px solid #4d4d4d;
-    border-radius: 5px;
-    padding: 20px;
-    text-align: center;
-  }
-  
-  .grid-plugins {
-    background-color: #8cd4f0;
-    border: 1px solid #4d4d4d;
-    border-radius: 5px;
-    padding: 20px;
-    text-align: center;
-  }
+.grid-javaserver {
+  background-color: #f08ca7;
+  border: 1px solid #4d4d4d;
+  border-radius: 5px;
+  padding: 20px;
+  text-align: center;
+}
+
+.grid-plugins {
+  background-color: #8cd4f0;
+  border: 1px solid #4d4d4d;
+  border-radius: 5px;
+  padding: 20px;
+  text-align: center;
+}

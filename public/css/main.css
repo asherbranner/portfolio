@@ -106,3 +106,7 @@ progress {
     width: 80%;
     height: 20px;
 }
+
+#detach-button-host {
+    display: none !important;
+}

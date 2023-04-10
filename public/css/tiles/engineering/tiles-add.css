@@ -6,6 +6,7 @@
     padding: 20px;
     text-align: center;
   }
+
   /* grid drafting  */
   .grid-d2world {
     background-color: #72cbec;
@@ -14,12 +15,12 @@
     padding: 20px;
     text-align: center;
   }
+
   /* grid mechanical simulation */
-  .grid-mechsim {
+  .grid-worldsim {
     background-color: #72cbec;
     border: 1px solid #4d4d4d;
     border-radius: 5px;
     padding: 20px;
     text-align: center;
   }
-  
