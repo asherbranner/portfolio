@@ -75,8 +75,8 @@ app.post('/contact', function (req, res) {
     },
   });
   var mailOptions = {
-    from: '"Contact Noah" <contact@noaha.tech>',
-    to: "noah@noaha.tech",
+    from: process.env.emailfrom,
+    to: process.env.emailto,
     subject: 'Form Submission - ' + contactname,
     text: 'Name: ' + contactname + '\r\n' + 'Email: ' + contactemail + '\r\n' + 'Phone: ' + contactphone + '\r\n' + 'Message: ' + contactmessage + '\r\n\r\n' + 'Sent by noaha.tech'
   }
