@@ -3,7 +3,7 @@
 .grid-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  grid-gap: 20px;
+  grid-gap: 1.5%;
 }
 
 .grid-container img {
@@ -13,7 +13,7 @@
 }
 
 .grid-content {
-  padding: 20px;
+  padding: 1.5%;
 }
 
 .grid-title {
