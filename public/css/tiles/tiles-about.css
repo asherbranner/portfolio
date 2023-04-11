@@ -1,0 +1,37 @@
+/* CSS for tiles */
+/* CSS for specific tiles */
+
+.grid-form {
+  background-color: #8ccdf0;
+  border: 1px solid #4d4d4d;
+  border-radius: 5px;
+  padding: 20px;
+}
+.grid-form h2{
+  text-align: center;
+  
+}
+.grid-form label{
+  text-align: left;
+  display: inline-block;
+  width: 28%;
+}
+.grid-form input{
+  padding-right: 0px;
+  display: inline-block;
+  width: 69%;
+}
+
+.grid-form textarea{
+  min-width: 69%;
+  max-width: 69%;
+  min-height: 20px;
+  max-height: 100%;
+}
+.grid-form input[type="submit"]
+{
+  padding-right: 0px;
+  display: block;
+  width: 40%;
+  margin: 0 auto;
+}

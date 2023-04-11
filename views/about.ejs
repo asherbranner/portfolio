@@ -3,6 +3,7 @@
 
 <head>
   <%- include('const/head') %>
+  <link rel="stylesheet" href="/css/tiles/tiles-about.css">
     <title>About Me</title>
 </head>
 
@@ -13,31 +14,32 @@
       <h1>Robotics Engineer, Full-Stack Developer</h1>
   </header>
   <main>
-    <div>
+    <div classs="grid-formcontainer">
       <h2>Here you can learn more about me and my background...</h2>
-      <h2>Contact Me!</h2>
-    </div>
-    <div>
-      <form action="/contact" method="POST">
-        <label for="contactname">Name:</label>
-        <input type="text" id="contactname" name="contactname" required>
-        <label for="contactemail">Email:</label>
-        <input type="email" id="contactemail" name="contactemail" required>
-        <label for="contactmessage">Message:</label>
-        <textarea id="contactmessage" name="contactmessage" required></textarea>
-        <input type="submit" value="Submit">
-      </form>
-    </div>
-    <div>
-      <form action="/contact" method="POST">
-        <label for="contactname">Name:</label>
-        <input type="text" id="contactname" name="contactname" required>
-        <label for="contactemail">Email:</label>
-        <input type="email" id="contactemail" name="contactemail" required>
-        <label for="contactmessage">Message:</label>
-        <textarea id="contactmessage" name="contactmessage" required></textarea>
-        <input type="submit" value="Submit">
-      </form>
+      <div class="grid-form">
+        <h2>Contact Me!</h2>
+        <form action="/contact" method="POST">
+          <div>
+            <label for="contactname">Name:</label>
+            <input type="text" id="contactname" name="contactname" required>
+          </div>
+          <div>
+            <label for="contactemail">Email:</label>
+            <input type="email" id="contactemail" name="contactemail" required>
+          </div>
+          <div>
+            <label for="contactphone">Phone:</label>
+            <input type="tel" id="contactphone" name="contactphone">
+          </div>
+          <div>
+          <label for="contactmessage">Message:</label>
+          <textarea id="contactmessage" name="contactmessage" required></textarea>
+        </div>
+          <div>
+          <input type="submit" value="Submit">
+          </div>
+        </form>
+      </div>
     </div>
   </main>
   <footer>
