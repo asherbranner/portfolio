@@ -2,18 +2,28 @@
 <html>
 
 <head>
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Noah Asherbranner's ePortfolio">
+  <meta name="twitter:image" content="https://noaha.tech/images/icons/status/onlineembed.png">
+  <meta name="twitter:description" content="ePortfolio - Python Experience">
+  <meta property="og:title" content="Noah Asherbranner's ePortfolio">
+  <meta property="og:description" content="ePortfolio - Python Experience">
+  <meta property="og:image" content="https://noaha.tech/images/icons/status/onlineembed.png">
+  <meta property="og:url" content="https://noaha.tech/software/python">
+  <meta property="og:type" content="website">
+  <meta name="description" content="ePortfolio - Python Experience">
   <%- include('../const/head') %>
-    <link rel="stylesheet" href="/css/tiles/software/tiles-python.css">
-    <script>
-      if ('serviceWorker' in navigator) {
-        window.addEventListener('load', () => {
-          navigator.serviceWorker.register('/sw.js')
-            .then(registration => console.log('Service Worker registered'))
-            .catch(error => console.log('Service Worker registration failed:', error));
-        });
-      }
-    </script>
-    <title>Python Experience</title>
+  <link rel="stylesheet" href="/css/tiles/software/tiles-python.css">
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js')
+          .then(registration => console.log('Service Worker registered'))
+          .catch(error => console.log('Service Worker registration failed:', error));
+      });
+    }
+  </script>
+  <title>Python Experience</title>
 </head>
 
 <body>

@@ -2,9 +2,19 @@
 <html>
 
 <head>
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Noah Asherbranner's ePortfolio">
+  <meta name="twitter:image" content="https://noaha.tech/images/icons/status/onlineembed.png">
+  <meta name="twitter:description" content="ePortfolio - Contact Me">
+  <meta property="og:title" content="Noah Asherbranner's ePortfolio">
+  <meta property="og:description" content="ePortfolio - Contact Me">
+  <meta property="og:image" content="https://noaha.tech/images/icons/status/onlineembed.png">
+  <meta property="og:url" content="https://noaha.tech/contact">
+  <meta property="og:type" content="website">
+  <meta name="description" content="ePortfolio - Contact Me">
   <%- include('const/head') %>
-  <link rel="stylesheet" href="/css/tiles/tiles-about.css">
-    <title>About Me</title>
+  <link rel="stylesheet" href="/css/tiles/tiles-contact.css">
+  <title>Contact Me</title>
 </head>
 
 <body>
@@ -18,7 +28,7 @@
       <h2>Here you can learn more about me and my background...</h2>
       <div class="grid-form">
         <h2>Contact Me!</h2>
-        <form action="/contact" method="POST">
+        <form action="/contactform" method="POST">
           <div>
             <label for="contactname">Name:</label>
             <input type="text" id="contactname" name="contactname" required>

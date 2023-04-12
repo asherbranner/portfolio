@@ -52,15 +52,11 @@ app.get('/', (req, res) => {
   res.render('home');
 });
 
-app.get('/projects', (req, res) => {
-  res.render('projects');
+app.get('/contact', function (req, res) {
+  res.render('contact');
 });
 
-app.get('/about', function (req, res) {
-  res.render('about');
-});
-
-app.post('/contact', function (req, res) {
+app.post('/contactform', function (req, res) {
   console.log(req.body);
   console.log(req.body.contactname);
   var contactname = req.body.contactname;
@@ -87,7 +83,7 @@ app.post('/contact', function (req, res) {
     else {
       console.log('Email sent: ' + info.response);
     }
-    res.redirect('/about')
+    res.redirect('/contact')
   })
 })
 
