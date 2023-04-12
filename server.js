@@ -31,9 +31,9 @@ app.use(express.urlencoded({ extended: true }));
 
 // Set the view engine to EJS
 app.set('view engine', 'ejs');
-const privateKey = fs.readFileSync('C://Certbot/live/noaha.tech/privkey.pem', 'utf8');
-const certificate = fs.readFileSync('C://Certbot/live/noaha.tech/cert.pem', 'utf8');
-const ca = fs.readFileSync('C://Certbot/live/noaha.tech/chain.pem', 'utf8');
+const privateKey = fs.readFileSync(process.env.cbprivkey, 'utf8');
+const certificate = fs.readFileSync(process.env.cbcert, 'utf8');
+const ca = fs.readFileSync(process.env.cbca, 'utf8');
 const credentials = {
   key: privateKey,
   cert: certificate,
