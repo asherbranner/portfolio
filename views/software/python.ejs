@@ -12,18 +12,18 @@
   <meta property="og:url" content="https://noaha.tech/software/python">
   <meta property="og:type" content="website">
   <meta name="description" content="ePortfolio - Python Experience">
-  <%- include('../const/head') %>
   <link rel="stylesheet" href="/css/tiles/software/tiles-python.css">
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
         navigator.serviceWorker.register('/sw.js')
-          .then(registration => console.log('Service Worker registered'))
-          .catch(error => console.log('Service Worker registration failed:', error));
+        .then(registration => console.log('Service Worker registered'))
+        .catch(error => console.log('Service Worker registration failed:', error));
       });
     }
-  </script>
+    </script>
   <title>Python Experience</title>
+  <%- include('../const/head') %>
 </head>
 
 <body>

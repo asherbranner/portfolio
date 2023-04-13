@@ -3,8 +3,6 @@
 /* Import tiles.css */
 @import url('/css/tiles/tiles.css');
 
-/* Import progress-bar.css */
-@import url('/css/progress-bar/progress-bar.css');
 
 /* Body styles */
 html {
@@ -16,7 +14,8 @@ body {
     background-color: #000000;
     margin: 0;
     max-height: 100%;
-    display: grid;
+    display: flex;
+    flex-direction: column;
 }
 
 main {
@@ -24,9 +23,9 @@ main {
     display: flex;
     flex-direction: column;
     max-height: 100%;
-    height: 100%;
-    padding: 1rem;
-    margin-bottom: 4.5rem;
+    padding: 1%;
+    max-height: fit-content;
+    overflow-y: visible !important;
 }
 main h2, main h3, main h4 {
     color: black;
@@ -38,7 +37,8 @@ main h2, main h3, main h4 {
 header {
     background-color: #212121;
     color: #ffffff;
-    padding: 1rem 1rem 0 1rem;
+    padding: 1rem 1rem 0rem 1rem;
+    min-height: fit-content;
 }
 
 header h1 {
@@ -115,4 +115,7 @@ progress {
 
 #detach-button-host {
     display: none !important;
+}
+.termsfeed-com---nb {
+    overflow: visible !important;
 }

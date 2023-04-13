@@ -12,8 +12,9 @@
   <meta property="og:url" content="https://noaha.tech/">
   <meta property="og:type" content="website">
   <meta name="description" content="Noah Asherbranner's Digital Portfolio (Site Updated Daily)">
-  <%- include('const/head') %>
+  <link rel="stylesheet" href="/css/tiles/tiles-home.css">
   <title>Noah's ePortfolio</title>
+  <%- include('const/head') %>
 </head>
 
 <body>
@@ -23,13 +24,12 @@
 
   </header>
   <main>
+    <div class="grid-container">
+      <div class="grid-home">
         <h2>Welcome to my Website!</h2>
         <h3>
-          This is a collection of my skills, knowledge, passions, and more.
-        </h3>
-        <h3>
           Started in March 2023, I began building this site as a way to show my engineering and technical
-          skills in a meaningful way. 
+          skills in a meaningful way.
         </h3>
         <h3>Site Navigation:</h3>
         <h3>
@@ -40,6 +40,8 @@
         <h4>
           This site is updated daily, so check back often for more content and features!
         </h4>
+      </div>
+    </div>
   </main>
   <footer>
     <%- include('const/footer') %>
