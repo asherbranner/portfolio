@@ -6,9 +6,9 @@
   column-gap: 1.5%;
   row-gap: 1%;
   padding: 1%;
-  padding-bottom: 6rem;
-  min-height: 100%;
- 
+  padding-bottom: 0rem;
+  max-height: 100%;
+  margin: 0;
 }
 
 .grid-container img {

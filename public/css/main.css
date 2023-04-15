@@ -6,6 +6,8 @@
 
 /* Body styles */
 html {
+    margin: 0;
+    min-height: 100%;
     height: 100%;
 }
 
@@ -13,32 +15,31 @@ body {
     font-family: 'Roboto', sans-serif;
     background-color: #000000;
     margin: 0;
-    max-height: 100%;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: fit-content(100%) auto fit-content(100%);
+    grid-template-areas: "header" "main" "footer";
+    min-height: 100%;
+    height: 100%;
 }
 
 main {
     background-color: #424242;
     display: flex;
     flex-direction: column;
-    max-height: 100%;
     padding: 1%;
-    max-height: fit-content;
-    overflow-y: visible !important;
+    overflow-y: visible;
 }
 main h2, main h3, main h4 {
     color: black;
     text-align: center;
 }
 
-
 /* Header styles */
 header {
     background-color: #212121;
     color: #ffffff;
     padding: 1rem 1rem 0rem 1rem;
-    min-height: fit-content;
+    height: 100%;
 }
 
 header h1 {
@@ -89,7 +90,11 @@ nav a:hover {
 }
 
 /* Main content styles */
-
+.fill{
+    display: flex;
+    margin-bottom: 121px;
+    visibility: hidden;
+}
 
 /* Footer styles */
 footer {
@@ -101,6 +106,7 @@ footer {
     bottom: 0;
     position: fixed;
     width: 100%;
+    flex: none;
 }
 
 footer img {
