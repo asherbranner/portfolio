@@ -21,15 +21,18 @@ document.addEventListener('DOMContentLoaded', function () {
     function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
     gtag('config', 'G-JRMXMCDZF9', 'auto', {
-        cookie_flags: 'max-age=7200; secure=true; samesite=none'
+        cookie_flags: 'max-age=7200; Secure=True; SameSite=None'
     })
     gtag('config', 'G-0V7JNYGWCC', 'auto', {
-        cookie_flags: 'max-age=7200; secure=true; samesite=none'
+        cookie_flags: 'max-age=7200; Secure=True; SameSite=None'
     })
     gtag('config', 'G-B8SKQ9HHPZ', 'auto', {
-        cookie_flags: 'max-age=7200; secure=true; samesite=none'
+        cookie_flags: 'max-age=7200; Secure=True; SameSite=None'
     })
     gtag('config', 'G-X6LMX9VR0Y', 'auto', {
-        cookie_flags: 'max-age=7200; secure=true; samesite=none'
+        cookie_flags: 'max-age=7200; Secure=True; SameSite=None'
+    })
+    gtag('config', 'GT-K4C5X9C', 'auto', {
+        cookie_flags: 'max-age=7200; Secure=True; SameSite=None'
     })
 });
