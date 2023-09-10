@@ -52,40 +52,40 @@ app.get('/', (req, res) => {
   res.render('home');
 });
 
-app.get('/contact', function (req, res) {
-  res.render('contact');
-});
+// app.get('/contact', function (req, res) {
+//   res.render('contact');
+// });
 
-app.post('/contactform', function (req, res) {
-  console.log(req.body);
-  console.log(req.body.contactname);
-  var contactname = req.body.contactname;
-  var contactemail = req.body.contactemail;
-  var contactphone = req.body.contactphone;
-  var contactmessage = req.body.contactmessage;
-  var transporter = nodemailer.createTransport({
-    service: process.env.nodemailservice,
-    auth: {
-      user: process.env.nodemailuser,
-      pass: process.env.nodemailpass
-    },
-  });
-  var mailOptions = {
-    from: process.env.emailfrom,
-    to: process.env.emailto,
-    subject: 'Form Submission - ' + contactname,
-    text: 'Name: ' + contactname + '\r\n' + 'Email: ' + contactemail + '\r\n' + 'Phone: ' + contactphone + '\r\n' + 'Message: ' + contactmessage + '\r\n\r\n' + 'Sent by noaha.tech'
-  }
-  transporter.sendMail(mailOptions, function (error, info) {
-    if (error) {
-      console.log(error);
-    }
-    else {
-      console.log('Email sent: ' + info.response);
-    }
-    res.redirect('/contact')
-  })
-})
+// app.post('/contactform', function (req, res) {
+//   console.log(req.body);
+//   console.log(req.body.contactname);
+//   var contactname = req.body.contactname;
+//   var contactemail = req.body.contactemail;
+//   var contactphone = req.body.contactphone;
+//   var contactmessage = req.body.contactmessage;
+//   var transporter = nodemailer.createTransport({
+//     service: process.env.nodemailservice,
+//     auth: {
+//       user: process.env.nodemailuser,
+//       pass: process.env.nodemailpass
+//     },
+//   });
+//   var mailOptions = {
+//     from: process.env.emailfrom,
+//     to: process.env.emailto,
+//     subject: 'Form Submission - ' + contactname,
+//     text: 'Name: ' + contactname + '\r\n' + 'Email: ' + contactemail + '\r\n' + 'Phone: ' + contactphone + '\r\n' + 'Message: ' + contactmessage + '\r\n\r\n' + 'Sent by noaha.tech'
+//   }
+//   transporter.sendMail(mailOptions, function (error, info) {
+//     if (error) {
+//       console.log(error);
+//     }
+//     else {
+//       console.log('Email sent: ' + info.response);
+//     }
+//     res.redirect('/contact')
+//   })
+// })
 
 app.get('/engineering', (req, res) => {
   res.render('engineering');
