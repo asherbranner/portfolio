@@ -1,0 +1,36 @@
+/* CSS for tiles */
+/* CSS for specific tiles */
+
+.grid-wdws {
+    background-color: #9b3c8b;
+    border: 1px solid #4d4d4d;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+}
+  
+
+.grid-coming-soon {
+    background-color: #8cc5f0;
+    border: 1px solid #4d4d4d;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+}
+
+.grid-wdws-p1 {
+background-color: #f08c8c;
+border: 1px solid #4d4d4d;
+border-radius: 5px;
+padding: 20px;
+text-align: center;
+}
+
+.grid-wdws-p2 {
+background-color: #8cf0a1;
+border: 1px soFlid #4d4d4d;
+border-radius: 5px;
+padding: 20px;
+text-align: center;
+}
+  
