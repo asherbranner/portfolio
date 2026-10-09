@@ -22,7 +22,7 @@ jobs:
         run: npm ci
 
       - name: Run node --test
-        run: node --test test/
+        run: node --test test/*.test.js
 
       - name: Syntax check (node --check) across top-level JS
         run: for f in *.js; do node --check "$f"; done
