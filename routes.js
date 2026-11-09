@@ -1,4 +1,6 @@
 // Require necessary modules
+const path = require("path");
+
 module.exports = function (app) {
 // Start Service Worker
   app.get('/sw.js', (req, res) => {
@@ -31,8 +33,8 @@ module.exports = function (app) {
   });
 
   // Handling non matching request from the client
-  app.use((req, res, next) => {
+  app.use((req, res) => {
     res.status(404).send(
-      "<%- include('const/header') %><h1>That's awkward... This page doesn't exist. Retry Home?</h1><a href='/'><img src= '/images/icons/status/online.png'</a>")
+      "<%- include('const/header') %><h1>That's awkward... This page doesn't exist. Retry Home?</h1><a href='/'><img src= '/images/icons/status/online.png'</a><p><a href='/'>Go back to Home</a></p>")
   })
 }
