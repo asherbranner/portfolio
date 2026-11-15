@@ -1,7 +1,8 @@
 # Personal Ignore Files
 *.code-workspace
-/public/images/
-/public/videos/
+# 2026-11-15: the old /public/images/ and /public/videos/ entries are GONE.
+# They kept the entire 2023 media set out of git, out of every backup, and it
+# did not survive. Site media belongs in version control.
 /public/.well-known/
 *.DS_Store
 *.ini
