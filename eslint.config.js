@@ -24,16 +24,4 @@ module.exports = [
       "no-unused-vars": ["warn", { args: "after-used" }],
     },
   },
-  {
-    // The service worker runs in the SW global scope, not Node.
-    files: ["sw.js", "public/**/*.js"],
-    languageOptions: {
-      ecmaVersion: "latest",
-      sourceType: "module",
-      globals: { ...globals.serviceworker },
-    },
-    rules: {
-      "no-unused-vars": ["warn", { args: "after-used" }],
-    },
-  },
 ];
