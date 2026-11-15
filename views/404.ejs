@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('const/head', { title: "Page not found", description: "That page doesn't exist — head back home.", canonical: "/404" }) %>
+</head>
+<body>
+  <%- include('const/header', { active: "" }) %>
+  <main id="main" class="page">
+    <h1>That's awkward… this page doesn't exist.</h1>
+    <p>The 2023 site is gone (rebuilt November 2026) and some old links didn't
+       make the move. The pages that did move redirect automatically.</p>
+    <p><a class="btn" href="/">Go back to Home</a></p>
+  </main>
+  <%- include('const/footer') %>
+</body>
+</html>

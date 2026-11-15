@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('const/head', { title: "Contact", description: "Contact Noah Asherbranner — email, GitHub, LinkedIn, or the form.", canonical: "/contact" }) %>
+</head>
+<body>
+  <%- include('const/header', { active: "contact" }) %>
+  <main id="main" class="page contact-grid">
+    <div>
+      <h1>Contact</h1>
+      <p>The fastest way to reach me is email —
+         <a href="mailto:noah@noaha.tech">noah@noaha.tech</a>.
+         Submissions from this form go straight to the same inbox; I answer
+         within a day or two.</p>
+      <ul class="contact-list">
+        <li><a href="https://github.com/asherbranner" target="_blank" rel="noopener">github.com/asherbranner</a></li>
+        <li><a href="https://www.linkedin.com/in/asherbranner/" target="_blank" rel="noopener">linkedin.com/in/asherbranner</a></li>
+        <li>Arizona · mountain time</li>
+      </ul>
+    </div>
+    <form class="contact-form" action="/contactform" method="POST">
+      <% if (typeof errors !== "undefined" && errors && errors.length) { %>
+        <div class="form-errors" role="alert">
+          <ul><% errors.forEach(function (e) { %><li><%= e %></li><% }); %></ul>
+        </div>
+      <% } %>
+      <% if (typeof sent !== "undefined" && sent) { %>
+        <p class="form-sent" role="status">Message sent — talk soon.</p>
+      <% } %>
+      <div>
+        <label for="contactname">Name</label>
+        <input type="text" id="contactname" name="contactname" required maxlength="120"
+               value="<%= typeof values !== 'undefined' ? values.contactname || '' : '' %>">
+      </div>
+      <div>
+        <label for="contactemail">Email</label>
+        <input type="email" id="contactemail" name="contactemail" required maxlength="160"
+               value="<%= typeof values !== 'undefined' ? values.contactemail || '' : '' %>">
+      </div>
+      <div>
+        <label for="contactphone">Phone <span class="optional">(optional)</span></label>
+        <input type="tel" id="contactphone" name="contactphone" maxlength="40"
+               value="<%= typeof values !== 'undefined' ? values.contactphone || '' : '' %>">
+      </div>
+      <div>
+        <label for="contactmessage">Message</label>
+        <textarea id="contactmessage" name="contactmessage" required rows="6" maxlength="4000"><%= typeof values !== 'undefined' ? values.contactmessage || '' : '' %></textarea>
+      </div>
+      <p><button class="btn" type="submit">Send</button></p>
+    </form>
+  </main>
+  <%- include('const/footer') %>
+</body>
+</html>

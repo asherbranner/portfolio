@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('const/head', { title: "Projects", description: "Selected projects: self-hosted web infrastructure, automation labs, Java game-server tooling, ANSYS SCADE embedded work, and robotics heritage.", canonical: "/projects" }) %>
+</head>
+<body>
+  <%- include('const/header', { active: "projects" }) %>
+  <main id="main" class="page">
+    <h1>Projects</h1>
+    <p class="sub">Things I designed and shipped — running, maintained, or honestly retired.</p>
+
+    <section class="projects">
+      <article class="project">
+        <span class="tile t-teal" aria-hidden="true"><svg viewBox="0 0 100 100"><text x="50" y="66" class="tile-glyph">&lt;/&gt;</text></svg></span>
+        <div>
+          <h2>This site</h2>
+          <p>Rebuilt November 2026. Node.js + Express + EJS on a home server;
+             one stylesheet; zero client-side JavaScript; strict Content-Security-Policy
+             (<code>script-src 'none'</code>) with HSTS and self-renewing Let's Encrypt
+             certificates behind nginx. Every push is linted and unit-tested by CI
+             before it can deploy; a canary re-checks the whole chain every ten minutes.
+             The 2023 edition ignored <code>public/images/</code> and
+             <code>public/videos/</code> in <code>.gitignore</code> — the media was never
+             committed anywhere and did not survive. That mistake is fixed: media is
+             versioned now (see <code>public/legacy-2023/</code> in git).</p>
+          <p class="chips" aria-label="Stack">
+            <span class="chip">Node.js</span><span class="chip">Express</span><span class="chip">EJS</span>
+            <span class="chip">GitHub Actions</span><span class="chip">nginx</span><span class="chip">Let's Encrypt</span>
+          </p>
+        </div>
+      </article>
+
+      <article class="project">
+        <span class="tile t-amber" aria-hidden="true"><svg viewBox="0 0 100 100"><text x="50" y="66" class="tile-glyph">OPS</text></svg></span>
+        <div>
+          <h2>Self-hosted automation &amp; local-AI lab</h2>
+          <p>A small private fleet: Linux servers running CI runners for every repo,
+             a monitoring canary that pages me by text message when anything goes red
+             (and stays quiet when it's a false alarm), nightly backups verified by
+             checksum with staleness alarms, split-DNS and certificate automation, and
+             small local language models doing drafting, triage, and command execution
+             — sized to run on consumer GPUs, with no cloud dependency.</p>
+          <p class="chips" aria-label="Stack">
+            <span class="chip">Linux</span><span class="chip">systemd</span><span class="chip">bash</span>
+            <span class="chip">CI/CD</span><span class="chip">monitoring</span><span class="chip">llama.cpp / Ollama</span>
+          </p>
+        </div>
+      </article>
+
+      <article class="project">
+        <span class="tile t-blue" aria-hidden="true"><svg viewBox="0 0 100 100"><text x="50" y="66" class="tile-glyph">MC</text></svg></span>
+        <div>
+          <h2>Game-server tooling (Java)</h2>
+          <p>Custom Java plugins and an automated pipeline for a self-hosted
+             Minecraft network: build → test matrix on throwaway servers → deploy →
+             RCON health verification, with automatic rollback when a boot doesn't
+             verify. Includes a live map compass plugin so players can find their way
+             from the browser. Twelve-hour unattended failure hunts taught me more
+             about preflight gates and honest status reporting than any manual.</p>
+          <p class="chips" aria-label="Stack">
+            <span class="chip">Java</span><span class="chip">Paper/Spigot API</span><span class="chip">CI/CD</span>
+            <span class="chip">RCON</span><span class="chip">BlueMap</span>
+          </p>
+        </div>
+      </article>
+
+      <article class="project">
+        <span class="tile t-violet" aria-hidden="true"><svg viewBox="0 0 100 100"><text x="50" y="66" class="tile-glyph">A</text></svg></span>
+        <div>
+          <h2>World Domination with ANSYS SCADE</h2>
+          <p>A hands-on two-part series (published on the PADT engineering blog):
+             model-based design from Simulink-style diagrams to embedded C running on
+             an Arduino — what simulation-to-metal actually looks like when you drive
+             the whole workflow yourself. <a href="/writing/wdws">Read the series index</a>.</p>
+          <p class="chips" aria-label="Stack">
+            <span class="chip">ANSYS SCADE</span><span class="chip">Model-based design</span>
+            <span class="chip">Embedded C</span><span class="chip">Arduino</span>
+          </p>
+        </div>
+      </article>
+
+      <article class="project">
+        <span class="tile t-green" aria-hidden="true"><svg viewBox="0 0 100 100"><text x="50" y="66" class="tile-glyph">3D</text></svg></span>
+        <div>
+          <h2>RoboArm &amp; Tello drone experiments <span class="era">2022–2023</span></h2>
+          <p>A 3D-printed, CAD-designed robotic arm (Inventor → print → control
+             code) and autonomous flight experiments on a DJI Tello. Their demo
+             videos lived on the old site as MP4s; they didn't survive a drive change
+             and are kept as a cautionary note — the arm and the drone still run.</p>
+          <p class="chips" aria-label="Stack">
+            <span class="chip">Autodesk Inventor</span><span class="chip">3D printing</span>
+            <span class="chip">Python</span><span class="chip">drones</span>
+          </p>
+        </div>
+      </article>
+
+      <article class="project retired">
+        <span class="tile t-slate" aria-hidden="true"><svg viewBox="0 0 100 100"><text x="50" y="66" class="tile-glyph">EV</text></svg></span>
+        <div>
+          <h2>Electric vehicle design &amp; capstone <span class="era">2017–2018</span></h2>
+          <p>The heritage work: high-school EV design team, PLTW Engineering capstone,
+             FIRST Robotics (team president, then mentor — 30 Under 30, CA 47th
+             District). Most of what I trust about engineering starts here.</p>
+          <p class="chips" aria-label="Stack">
+            <span class="chip">SolidWorks</span><span class="chip">AutoCAD</span>
+            <span class="chip">schematics</span><span class="chip">team lead</span>
+          </p>
+        </div>
+      </article>
+    </section>
+  </main>
+  <%- include('const/footer') %>
+</body>
+</html>

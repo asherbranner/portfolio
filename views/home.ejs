@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('const/head', { title: "Software engineer & engineering simulation", description: "Noah Asherbranner — software engineer working in engineering simulation, automation, and self-hosted systems. From FIRST robotics to ANSYS SCADE.", canonical: "/" }) %>
+</head>
+<body>
+  <%- include('const/header', { active: "home" }) %>
+  <main id="main" class="page">
+    <section class="hero">
+      <h1>Noah Asherbranner</h1>
+      <p class="tagline">Software engineer · engineering simulation · automation</p>
+      <p class="lede">
+        I build the software around engineering work: embedded simulation models,
+        deployment pipelines, monitoring, and self-hosted infrastructure that
+        runs without subscriptions. My path runs from a high-school robotics
+        shop to ANSYS model-based design — and I still ship everything myself.
+      </p>
+      <p class="cta-row">
+        <a class="btn" href="/projects">See the projects</a>
+        <a class="btn btn-quiet" href="/Noah-Asherbranner-Resume.pdf" target="_blank" rel="noopener">Résumé (PDF)</a>
+      </p>
+    </section>
+
+    <section class="cards" aria-label="What I work on">
+      <article class="card">
+        <span class="tile t-teal" aria-hidden="true"><svg viewBox="0 0 100 100"><text x="50" y="66" class="tile-glyph">SIM</text></svg></span>
+        <h2>Simulation, to metal</h2>
+        <p>Model-based design with ANSYS SCADE and Simulink — control models that
+           end up running on real hardware, written up in a two-part
+           <a href="/writing">published series</a>.</p>
+      </article>
+      <article class="card">
+        <span class="tile t-amber" aria-hidden="true"><svg viewBox="0 0 100 100"><text x="50" y="66" class="tile-glyph">OPS</text></svg></span>
+        <h2>Automation that watches itself</h2>
+        <p>A self-hosted lab: CI runners, canary monitoring that pages me over
+           iMessage, verified nightly backups, and local language models doing
+           the drudge work. No cloud, no licenses.</p>
+      </article>
+      <article class="card">
+        <span class="tile t-blue" aria-hidden="true"><svg viewBox="0 0 100 100"><text x="50" y="66" class="tile-glyph">1st</text></svg></span>
+        <h2>Robotics roots</h2>
+        <p>FIRST Robotics mentor and team president, 30 Under 30 (CA 47th
+           District), B.S.E. Engineering (Robotics) from Arizona State. The shop
+           floor still shapes how I write software.</p>
+      </article>
+    </section>
+
+    <section class="prose">
+      <h2>How this site works</h2>
+      <p>
+        Written by hand: Node.js + Express on a home server, templates in EJS,
+        one stylesheet, zero JavaScript, zero trackers — which is also why there
+        is no cookie banner here. GitHub Actions builds and tests every push;
+        certificates renew themselves; a monitoring canary checks the whole
+        chain every ten minutes. A rebuild of this site (November 2026) lost
+        some 2023 media for good — <a href="/projects">the projects page</a> says
+        why, and the fix is in the pipeline now.
+      </p>
+    </section>
+  </main>
+  <%- include('const/footer') %>
+</body>
+</html>

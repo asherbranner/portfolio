@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('const/head', { title: "Writing", description: "Published engineering writing: the World Domination with ANSYS SCADE series on the PADT blog.", canonical: "/writing" }) %>
+</head>
+<body>
+  <%- include('const/header', { active: "writing" }) %>
+  <main id="main" class="page">
+    <h1>Writing</h1>
+    <p class="sub">Engineering write-ups that shipped outside this site.</p>
+    <section class="cards">
+      <article class="card">
+        <span class="tile t-violet" aria-hidden="true"><svg viewBox="0 0 100 100"><text x="50" y="66" class="tile-glyph">A</text></svg></span>
+        <h2>World Domination with ANSYS SCADE</h2>
+        <p>A two-part, hands-on series on the <a href="https://www.padtinc.com" target="_blank" rel="noopener">PADT</a>
+           engineering blog: model-based design with SCADE, from block diagrams to
+           embedded C running on an Arduino. <a href="/writing/wdws">Index &amp; links</a>.</p>
+      </article>
+    </section>
+    <section class="prose">
+      <p>More writing lives in commit messages, incident write-ups, and runbooks
+         that never left the lab. If you want any of that public, ask — it's about
+         honest automation, and it's better with the rough edges left in.</p>
+    </section>
+  </main>
+  <%- include('const/footer') %>
+</body>
+</html>

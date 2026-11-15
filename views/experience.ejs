@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('const/head', { title: "Experience & skills", description: "Software and engineering-simulation experience: ANSYS tools, Daikin Applied, ASU Robotics B.S.E., FIRST mentorship, and a decade of self-employment.", canonical: "/experience" }) %>
+</head>
+<body>
+  <%- include('const/header', { active: "experience" }) %>
+  <main id="main" class="page">
+    <h1>Experience</h1>
+
+    <ol class="timeline">
+      <li>
+        <h2>Software Engineer — Engineering Simulation <span class="era">2023 – present · Arizona</span></h2>
+        <p>Development and technical work in the ANSYS ecosystem: simulation
+           tooling, model-based design (SCADE), and the software plumbing that gets
+           analysis adopted by real engineering teams — plus the automation lab
+           described on the <a href="/projects">projects page</a> that supports it.</p>
+      </li>
+      <li>
+        <h2>Published engineer-writer <span class="era">2023</span></h2>
+        <p>Two-part ANSYS SCADE series on the PADT engineering blog —
+           <a href="/writing/wdws">World Domination with ANSYS SCADE</a>.</p>
+      </li>
+      <li>
+        <h2>Engineering Intern — Daikin Applied, Phoenix <span class="era">2022</span></h2>
+        <p>SolidWorks assemblies for production, capital-expenditure reporting,
+           CAD for a training facility, design-review participation, Power BI
+           dashboards, and Python tooling.</p>
+      </li>
+      <li>
+        <h2>Arizona State University <span class="era">2018 – 2023</span></h2>
+        <p>B.S.E. Engineering (Robotics). Coursework heavy on dynamics, controls,
+           embedded systems, and computational modeling.</p>
+      </li>
+      <li>
+        <h2>Self-employed technician &amp; developer <span class="era">2012 – present</span></h2>
+        <p>150+ machines built or repaired, small-business IT, web work, and
+           process-improvement simulations that saved six figures annually for a
+           local operation.</p>
+      </li>
+      <li>
+        <h2>FIRST Robotics <span class="era">2013 – 2020</span></h2>
+        <p>Competitor, team president, then district mentor. 30 Under 30 award,
+           CA 47th District. Summer camp organizer.</p>
+      </li>
+    </ol>
+
+    <h2 id="skills">Skills</h2>
+    <div class="skill-groups">
+      <section>
+        <h3>Software</h3>
+        <p class="chips">
+          <span class="chip">Python</span><span class="chip">JavaScript</span><span class="chip">Java</span>
+          <span class="chip">C</span><span class="chip">C++</span><span class="chip">C#</span>
+          <span class="chip">Node.js / Express</span><span class="chip">HTML / CSS</span>
+          <span class="chip">bash / PowerShell</span><span class="chip">Swift</span>
+        </p>
+      </section>
+      <section>
+        <h3>Simulation &amp; design</h3>
+        <p class="chips">
+          <span class="chip">ANSYS (SCADE, Mechanical)</span><span class="chip">MATLAB / Simulink</span>
+          <span class="chip">LabVIEW</span><span class="chip">SolidWorks</span>
+          <span class="chip">AutoCAD</span><span class="chip">Inventor</span>
+          <span class="chip">Multisim</span><span class="chip">Altium / OrCAD / Eagle</span>
+          <span class="chip">technical writing</span>
+        </p>
+      </section>
+      <section>
+        <h3>Infrastructure</h3>
+        <p class="chips">
+          <span class="chip">Linux</span><span class="chip">systemd</span><span class="chip">Docker</span>
+          <span class="chip">nginx</span><span class="chip">Let's Encrypt</span><span class="chip">GitHub Actions</span>
+          <span class="chip">CI/CD</span><span class="chip">monitoring &amp; canaries</span>
+          <span class="chip">backup verification</span><span class="chip">network automation</span>
+        </p>
+      </section>
+      <section>
+        <h3>AI tooling</h3>
+        <p class="chips">
+          <span class="chip">local LLM serving (llama.cpp, Ollama)</span><span class="chip">agent pipelines</span>
+          <span class="chip">CI-integrated AI review</span><span class="chip">embedding search</span>
+        </p>
+      </section>
+    </div>
+  </main>
+  <%- include('const/footer') %>
+</body>
+</html>

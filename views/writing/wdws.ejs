@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('../const/head', { title: "World Domination with ANSYS SCADE", description: "The two-part ANSYS SCADE series: model-based design from Simulink-style block diagrams to embedded C on Arduino, published on the PADT blog.", canonical: "/writing/wdws" }) %>
+</head>
+<body>
+  <%- include('../const/header', { active: "writing" }) %>
+  <main id="main" class="page">
+    <h1>World Domination with ANSYS SCADE</h1>
+    <p class="sub">Published on the <a href="https://www.padtinc.com" target="_blank" rel="noopener">PADT</a> engineering blog, late 2023.</p>
+    <ol class="timeline">
+      <li>
+        <h2><a href="https://www.padtinc.com/2023-11-30/world-domination-with-ansys-scade-part-1/" target="_blank" rel="noopener">Part 1 — Initial Code</a> <span class="era">Nov 30, 2023</span></h2>
+        <p>Setting up a SCADE model: what model-based design actually changes about
+           how you write control code, and the first generated artifacts.</p>
+      </li>
+      <li>
+        <h2><a href="https://www.padtinc.com/2023-12-05/world-domination-with-ansys-scade-part-2/" target="_blank" rel="noopener">Part 2 — Arduino Time!</a> <span class="era">Dec 5, 2023</span></h2>
+        <p>Taking the generated model to hardware — embedded C on an Arduino,
+           and where the simulation-versus-reality seams show up.</p>
+      </li>
+    </ol>
+    <p><a class="btn btn-quiet" href="/writing">Back to Writing</a></p>
+  </main>
+  <%- include('../const/footer') %>
+</body>
+</html>
