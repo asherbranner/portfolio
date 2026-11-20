@@ -63,7 +63,25 @@ test("security headers are set on the response", async () => {
       String(res.headers["content-security-policy"]).includes("default-src 'self'"),
       "CSP present"
     );
-    assert.strictEqual(res.headers["cache-control"], "max-age= 300");
+    // 2026-11-20 contract: dynamic responses are no-cache (was the buggy
+    // blanket "max-age= 300"); the header is set by the middleware AFTER
+    // express.static so static keeps its own 30d maxAge (locked below).
+    assert.strictEqual(res.headers["cache-control"], "no-cache");
+  } finally {
+    server.close();
+  }
+});
+
+test("static assets keep 30d maxAge, immune to the dynamic no-cache", async () => {
+  const server = await startApp();
+  try {
+    const { res } = await get(server, { secure: true, path: "/robots.txt" });
+    assert.strictEqual(res.statusCode, 200);
+    assert.match(
+      String(res.headers["cache-control"]),
+      /max-age=2592000/,
+      "express.static must own Cache-Control for public/ (send only sets it when unset)"
+    );
   } finally {
     server.close();
   }

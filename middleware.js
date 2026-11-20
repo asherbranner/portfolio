@@ -11,7 +11,7 @@
 //    test/middleware.test.js — change one, change the other.
 const path = require("path");
 const express = require("express");
-const cacheTime = 86400000 * 30; // 30 days for static assets
+const cacheTime = 86400000 * 30; // 30 days, applied by express.static to public/ only
 
 module.exports = function (app) {
   app.enable("trust proxy");
@@ -31,14 +31,30 @@ module.exports = function (app) {
         "img-src 'self' data:; font-src 'self'; base-uri 'self'; " +
         "form-action 'self'; frame-ancestors 'self'"
     );
-    res.setHeader("Cache-Control", "max-age= 300");
-    req.secure ? next() : res.redirect("https://" + req.headers.host + req.url);
+    // 2026-11-20: Cache-Control is deliberately NOT set here. send (behind
+    // express.static) only writes Cache-Control when nobody set it first
+    // (send/index.js: !res.getHeader("Cache-Control")). A blanket header here
+    // -- the old "max-age= 300" with the stray space, and a naive no-cache
+    // too -- silently clobbered the 30d static maxAge. The dynamic no-cache
+    // policy lives in a middleware AFTER express.static; only the redirect
+    // path sets it here.
+    if (!req.secure) {
+      res.setHeader("Cache-Control", "no-cache");
+      return res.redirect("https://" + req.headers.host + req.url);
+    }
+    next();
   });
   app.use(
     express.static(path.join(__dirname, "public"), {
       maxAge: cacheTime,
     })
   );
+  // Dynamic responses (pages, healthz, POST, 404): never stale. Registered
+  // after express.static on purpose -- static keeps its own 30d header.
+  app.use((req, res, next) => {
+    res.setHeader("Cache-Control", "no-cache");
+    next();
+  });
   app.use(express.json());
   app.use(express.urlencoded({ extended: true }));
   app.set("view engine", "ejs");
