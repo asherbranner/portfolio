@@ -28,3 +28,20 @@ jobs:
 
       - name: Syntax check (node --check) across top-level JS
         run: for f in *.js; do node --check "$f"; done
+
+      # 2026-11-20: CI used to lint+test but never BOOT the app. Boot it on an
+      # ephemeral port and require /healthz to answer ok:true before green.
+      - name: Smoke boot (healthz must answer)
+        run: |
+          PORT=3100 HOST=127.0.0.1 node server.js &
+          SRV=$!
+          ok=0
+          for i in $(seq 1 15); do
+            # X-Forwarded-Proto stands in for nginx TLS: without it the app
+            # https-redirects the probe and the smoke can never see the JSON.
+            if curl -fsS -H "X-Forwarded-Proto: https" http://127.0.0.1:3100/healthz | grep -q ok.:true; then ok=1; break; fi
+            sleep 1
+          done
+          kill "$SRV" 2>/dev/null || true
+          [ "$ok" = 1 ] || { echo "SMOKE FAIL: /healthz never answered"; exit 1; }
+          echo "SMOKE OK"
