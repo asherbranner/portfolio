@@ -32,6 +32,28 @@ test("validate accepts a complete, well-formed submission", () => {
   );
 });
 
+test("honeypot submissions get the friendly lie (render sent:true, no delivery)", () => {
+  const res = fakeRes();
+  contact.handler(
+    {
+      body: {
+        hp_website: "http://spam.example",
+        contactname: "bot",
+        contactemail: "b@x.co",
+        contactmessage: "hi",
+      },
+    },
+    res
+  );
+  assert.deepStrictEqual(res.calls, [
+    { fn: "render", view: "contact", locals: { sent: true, values: {} } },
+  ]);
+});
+
+test("limiter is a middleware function (contact rate limit, 2026-11-20)", () => {
+  assert.strictEqual(typeof contact.limiter, "function");
+});
+
 test("validate enforces length limits", () => {
   const errors = contact.validate({
     contactname: "n".repeat(121),

@@ -24,6 +24,7 @@ function fakeRes() {
   res.send = (body) => { res.calls.push({ fn: "send", body }); return res; };
   res.render = (view, locals) => { res.calls.push({ fn: "render", view, locals }); return res; };
   res.redirect = (code, url) => { res.calls.push({ fn: "redirect", code, url }); return res; };
+  res.json = (obj) => { res.calls.push({ fn: "json", obj }); return res; };
   return res;
 }
 
@@ -71,11 +72,30 @@ test("registers the 4 legacy 301 redirects from the 2023 IA", () => {
   }
 });
 
-test("registers the /contactform POST (form target of views/contact.ejs)", () => {
+test("registers GET /healthz answering ok:true before the catch-all", () => {
+  const { gets, order } = load();
+  const idx = order.findIndex((r) => r.kind === "get" && r.route === "/healthz");
+  assert.ok(idx >= 0, "missing GET /healthz");
+  assert.ok(idx < order.length - 1, "/healthz registered after the catch-all");
+  const hit = gets.find((g) => g.route === "/healthz");
+  const res = fakeRes();
+  hit.handler({}, res);
+  assert.strictEqual(res.calls.length, 1);
+  assert.strictEqual(res.calls[0].fn, "json");
+  assert.strictEqual(res.calls[0].obj.ok, true);
+  assert.strictEqual(typeof res.calls[0].obj.uptime, "number");
+});
+
+test("registers the /contactform POST rate-limited (views/contact.ejs target)", () => {
   const { posts } = load();
   assert.strictEqual(posts.length, 1);
   assert.strictEqual(posts[0].route, "/contactform");
+  // app.post(route, limiter, handler): the fake records the limiter as the
+  // 2nd positional, so lock both halves against contact.js directly.
+  const contact = require("../contact");
   assert.strictEqual(typeof posts[0].handler, "function");
+  assert.strictEqual(typeof contact.limiter, "function");
+  assert.strictEqual(typeof contact.handler, "function");
 });
 
 test("catch-all is registered via app.use AFTER every get/post", () => {

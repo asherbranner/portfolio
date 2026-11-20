@@ -30,7 +30,16 @@ module.exports = function (app) {
 
   // Form target from views/contact.ejs (the 2023 form posted here while the
   // route was missing — restored and tested now).
-  app.post("/contactform", contact.handler);
+  // Health probe (2026-11-20) for the serving canary: proves the express app
+  // renders, not merely that the port accepts TCP. Registered before the
+  // catch-all so the 404 handler can never swallow it.
+  app.get("/healthz", (req, res) => {
+    res.json({ ok: true, uptime: Math.round(process.uptime()) });
+  });
+
+  // Rate-limited (2026-11-20): this POST previously had zero rate limiting;
+  // see contact.js limiter.
+  app.post("/contactform", contact.limiter, contact.handler);
 
   // Catch-all — registered last so it catches everything above it. Renders a
   // real styled page instead of shipping raw EJS source as a string body.

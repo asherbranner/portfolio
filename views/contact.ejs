@@ -46,6 +46,11 @@
         <label for="contactmessage">Message</label>
         <textarea id="contactmessage" name="contactmessage" required rows="6" maxlength="4000"><%= typeof values !== 'undefined' ? values.contactmessage || '' : '' %></textarea>
       </div>
+      <div class="hp-field" aria-hidden="true">
+        <label for="hp_website">Website (leave blank)</label>
+        <input type="text" id="hp_website" name="hp_website" tabindex="-1"
+               autocomplete="off">
+      </div>
       <p><button class="btn" type="submit">Send</button></p>
     </form>
   </main>

@@ -289,3 +289,14 @@ button.btn { cursor: pointer; font-family: inherit; }
   .site-header nav, .site-footer, .cta-row, form { display: none !important; }
   body { background: #fff; color: #000; }
 }
+
+/* Contact-form honeypot (2026-11-20 anti-spam). Hidden off-screen via CSS --
+   never inline -- so the zero-JS CSP (style-src 'self') stays intact. Bots
+   that fill it get a fake "sent" and no delivery; see contact.js. */
+.hp-field {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}

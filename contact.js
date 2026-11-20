@@ -5,9 +5,33 @@
 // instead of faking a "sent" — and the page always offers mailto as the
 // fallback. This restores what the 2023 site had (commit ad41f13) minus the
 // credentials-in-source-tree risk that made the original fragile.
+const rateLimit = require("express-rate-limit");
 const nodemailer = require("nodemailer");
 
 const LIMITS = { name: 120, email: 160, phone: 40, message: 4000 };
+
+// POST /contactform had ZERO rate limiting (2026-11-20): 5 per IP per 15 min.
+// middleware.js enables trust proxy and nginx sets X-Forwarded-For, so req.ip
+// is the real client behind the vhost.
+const limiter = rateLimit({
+  windowMs: 15 * 60 * 1000,
+  limit: 5,
+  standardHeaders: "draft-7",
+  legacyHeaders: false,
+  // express-rate-limit v7 refuses to run under permissive trust proxy (the
+  // middleware's app.enable("trust proxy") is locked by middleware.test.js).
+  // nginx is the only proxy in front (LAN-only vhost) and sets X-Forwarded-For
+  // itself, so skip the v7 proxy validation instead of touching that contract.
+  validate: { trustProxy: false },
+  handler: (req, res) => {
+    res.status(429).render("contact", {
+      errors: [
+        "Too many messages from this network -- try again in a few minutes, or email me directly at noah@noaha.tech.",
+      ],
+      values: req.body || {},
+    });
+  },
+});
 
 function validate(body) {
   const errors = [];
@@ -36,6 +60,12 @@ function configured() {
 
 function handler(req, res) {
   const body = req.body || {};
+  // Honeypot: #hp_website is off-screen in main.css and aria-hidden, so real
+  // visitors never fill it. Anything that does is a bot -- answer the friendly
+  // lie, deliver nothing. Checked before validate so bots get no signal.
+  if (String(body.hp_website || "").trim()) {
+    return res.render("contact", { sent: true, values: {} });
+  }
   const errors = validate(body);
   if (errors.length) {
     return res.status(400).render("contact", { errors, values: body });
@@ -79,4 +109,4 @@ function handler(req, res) {
     );
 }
 
-module.exports = { handler, validate, configured };
+module.exports = { handler, validate, configured, limiter };
